@@ -1,11 +1,13 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const axios = require("axios");
+
 
 const questions = [
 
     {
         type: "input",
-        name: "username",
+        name: "user",
         message: "Please enter your GitHub username: "
     },
     {
@@ -34,14 +36,14 @@ const questions = [
         message: "What's the project's usage? "
     },
     {
-        type:" input",
+        type: " input",
         name: "license",
         message: "license: "
     },
     {
         type: "input",
         name: "contributing",
-        message:"Who's contributing? "
+        message: "Who's contributing? "
     },
     {
         type: "input",
@@ -54,12 +56,23 @@ const questions = [
 ];
 
 
-function writeToFile(fileName, data) {
+function writeToFile(answer, user) {
+
+
+
+
 }
+
+
 
 function init() {
     inquirer.prompt(questions).then(function (answers) {
-        console.log("Answers:", answers);
+        console.log("User's answers: ", answers);
+        const queryUrl = `https://api.github.com/users/${answers.user}`;
+        axios
+            .get(queryUrl)
+            .then(response => console.log(response.data));
+
     });
 
 }
