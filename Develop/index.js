@@ -71,7 +71,9 @@ function init() {
                 fs.writeFile('READ.md', mark, function (err) {
                     if (err) throw err;
                     console.log("Saved");
+                    
                 });
+                // console.log(mark);
             });
     });
 

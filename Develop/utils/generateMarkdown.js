@@ -21,7 +21,7 @@ ${answers.contributing}
 ${answers.test} 
 
 ## Picture
-${user.avatar_url}
+![Profile Image](${user.avatar_url})
 
 `;
 }
