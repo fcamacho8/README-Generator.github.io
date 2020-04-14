@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const axios = require("axios");
+generateMarkdown = require("./utils/generateMarkdown");
 
 
 const questions = [
@@ -55,24 +56,23 @@ const questions = [
 
 ];
 
-
-function writeToFile(answer, user) {
-
-
-
-
-}
-
-
-
 function init() {
     inquirer.prompt(questions).then(function (answers) {
         console.log("User's answers: ", answers);
         const queryUrl = `https://api.github.com/users/${answers.user}`;
         axios
             .get(queryUrl)
-            .then(response => console.log(response.data));
+            .then(response => {
 
+                const user = response.data;
+                const mark = generateMarkdown(answers, user)
+                console.log(user);
+
+                fs.writeFile('READ.md', mark, function (err) {
+                    if (err) throw err;
+                    console.log("Saved");
+                });
+            });
     });
 
 }

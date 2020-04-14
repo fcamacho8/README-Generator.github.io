@@ -3,6 +3,12 @@ function generateMarkdown(answers, user) {
 # ${answers.title}
 ## Description 
 ${answers.description}
+## Table of contents
+-Installation
+-Usage
+-License
+-Contribution
+-Tests
 ## Installation
 ${answers.installation}
 ## Usage 
@@ -14,7 +20,8 @@ ${answers.contributing}
 ## Tests 
 ${answers.test} 
 
-
+## Picture
+${user.avatar_url}
 
 `;
 }
