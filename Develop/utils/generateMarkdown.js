@@ -1,6 +1,8 @@
 function generateMarkdown(answers, user) {
   return `
 ![Markdown](https://img.shields.io/badge/100%25-Javascript-yellow)
+![Markdown](https://img.shields.io/badge/User-Francisco-blue)
+
 # ${answers.title}
 ## Description 
 ${answers.description}
@@ -10,6 +12,7 @@ ${answers.description}
 - License\n
 - Contribution\n
 - Tests\n
+- Questions\n
 ## Installation
 ${answers.installation}
 ## Usage 
@@ -18,13 +21,15 @@ ${answers.usage}
 ${answers.license}
 ## Contributing 
 ${answers.contributing}
-## Tests 
+## Test
 ${answers.test} 
 
-## Picture
-![Profile Image](${user.avatar_url})\n
-- **Email** ${user.html_url}
+---
 
+If there is any questions, please contact:\n
+- ${user.name}\n
+- **Email** ${user.html_url}\n
+![Profile Image](${user.avatar_url})\n
 `;
 }
 

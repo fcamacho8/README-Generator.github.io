@@ -1,8 +1,10 @@
 
 ![Markdown](https://img.shields.io/badge/100%25-Javascript-yellow)
+![Markdown](https://img.shields.io/badge/User-Francisco-blue)
+
 # README Generator
 ## Description 
-Creates a command-line application that dynamically generates a README from a user's input.
+Create a command-line application that dynamically generates a README.md
 ## Table of contents
 - Installation
 
@@ -14,19 +16,26 @@ Creates a command-line application that dynamically generates a README from a us
 
 - Tests
 
-## Installation
-Install npm then node index.js
-## Usage 
-Generates a README file
-## License 
-N/A
-## Contributing 
-N/A
-## Tests 
-N/a 
+- Questions
 
-## Picture
-![Profile Image](https://avatars1.githubusercontent.com/u/60532371?v=4)
+## Installation
+Clone repository. Install npm
+## Usage 
+Run "node index.js". Then answer the questioning. 
+## License 
+None
+## Contributing 
+None
+## Test
+Console.log 
+
+---
+
+If there is any questions, please contact:
+
+- Francisco Camacho
 
 - **Email** https://github.com/fcamacho8
+
+![Profile Image](https://avatars1.githubusercontent.com/u/60532371?v=4)
 
