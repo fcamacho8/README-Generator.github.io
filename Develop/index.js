@@ -68,7 +68,7 @@ function init() {
                 const mark = generateMarkdown(answers, user)
                 console.log(user);
 
-                fs.writeFile('READ.md', mark, function (err) {
+                fs.writeFile("README.md", mark, function (err) {
                     if (err) throw err;
                     console.log("Saved");
                     
